@@ -536,7 +536,7 @@
               state: `{{ session()->get('state') }}`,
               zip: `{{ session()->get('zip') }}`,
               amount: `{{ $gallery['amount'] + $gallery['shipping'] }}`,
-              note: `商品：{{ $gallery['title-ja'] }}, 住所：{{ session()->get('state') }}{{ session()->get('city') }}{{ session()->get('address1') }} {{ session()->get('address2') }}, 電話：{{ session()->get('phone') }}, 氏名：{{ session()->get('name') }}, e-mail：{{ session()->get('email') }}`
+              note: `商品：{{ $gallery['title-ja'] }}, 住所：{{ session()->get('state') }} {{ session()->get('city') }} {{ session()->get('address1') }} {{ session()->get('address2') }}, 電話：{{ session()->get('phone') }}, 氏名：{{ session()->get('name') }}, e-mail：{{ session()->get('email') }}`
           });
           const paymentResponse = await fetch('/square/createPayment', {
               method: 'POST',

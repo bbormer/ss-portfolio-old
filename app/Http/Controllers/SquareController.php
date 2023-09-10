@@ -38,15 +38,15 @@ class SquareController extends Controller
             $amountMoney->setAmount($data['amount']);
             $amountMoney->setCurrency('JPY');
 
-            $shipping_address = new Address();
-            $shipping_address->setAddressLine1($data['address1']);
-            $shipping_address->setAddressLine2($data['address2']);
-            $shipping_address->setAdministrativeDistrictLevel1($data['state']);
-            $shipping_address->setAdministrativeDistrictLevel2($data['city']);
-            $shipping_address->setPostalCode($data['zip']);
-            $shipping_address->setCountry('JP');
-            $shipping_address->setFirstName('ボビー');
-            $shipping_address->setLastName('ボロメオ');
+            // $shipping_address = new Address();
+            // $shipping_address->setAddressLine1($data['address1']);
+            // $shipping_address->setAddressLine2($data['address2']);
+            // $shipping_address->setAdministrativeDistrictLevel1($data['state']);
+            // $shipping_address->setAdministrativeDistrictLevel2($data['city']);
+            // $shipping_address->setPostalCode($data['zip']);
+            // $shipping_address->setCountry('JP');
+            // $shipping_address->setFirstName('ボビー');
+            // $shipping_address->setLastName('ボロメオ');
            
             $body = new \Square\Models\CreatePaymentRequest(
                 $data['sourceId'],
@@ -54,14 +54,15 @@ class SquareController extends Controller
             );
  
             $body->setAmountMoney($amountMoney);
-            $body->setBuyerEmailAddress($data['email']);
+            // $body->setBuyerEmailAddress($data['email']);
             $body->setNote($data['note']);
-            $body->setShippingAddress($shipping_address);
+            // $body->setShippingAddress($shipping_address);
             // dd($body);
  
             $res = $this->client->getPaymentsApi()->createPayment($body);
  
             if ($res->isSuccess()) {
+                // should send automatic acknowledgment mail here
                 return response()->json($res->getResult());
             } else {
                 throw new \Exception();
