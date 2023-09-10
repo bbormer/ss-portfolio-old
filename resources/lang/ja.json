@@ -30,5 +30,6 @@
     "buy": "購入",
     "SOLD OUT": "完売しました",
     "Payment successful": "ご購入ありがとうございました",
-    "Payment failed": "決済処理が失敗しました"
+    "Payment failed": "決済処理が失敗しました",
+    "(incl. tax)": "（税込）"
 }

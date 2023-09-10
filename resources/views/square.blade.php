@@ -11,7 +11,7 @@
       <figure x-data class="mx-auto w-[30%]"><img :src="`/images/{{ $gallery['file'] }}`" class="mb-30 mt-12 mb-6" /></figure>
       <div class="text-xl  text-center"> <!-- text-green-500 -->
         <p>{{ $locale == 'ja' ? $gallery['title-ja'] : $gallery['title-en']}}</p>
-        <p>{{ number_format($gallery['amount']) }}円</p>
+        <p>{{ number_format($gallery['amount']) }}円 {{ __('(incl. tax)') }}</p>
         {{-- <p class="text-base">{{ $locale == 'ja' ? '送料' : 'shipping'}}: {{ number_format($gallery['shipping']) }}円</p> --}}
         <p class="text-base">{{ __('shipping')}}: {{ number_format($gallery['shipping']) }}円</p>
       </div>
