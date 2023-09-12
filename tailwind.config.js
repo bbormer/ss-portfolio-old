@@ -8,8 +8,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                en: ["Montserrat"],
-                ja: ["'M PLUS 1p'"],
+                en: ["Montserrat", "sans"],
+                ja: ["'M PLUS 1p'", "sans"],
             },
         },
     },

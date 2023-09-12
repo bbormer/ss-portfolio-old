@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PaymentAcknowledgement;
 use Square\Models\Money;
 use Square\SquareClient;
 use Square\Models\Address;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Square\Models\CreatePaymentRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Mail;
+use Square\Models\CreatePaymentRequest;
 
 class SquareController extends Controller
 {
@@ -63,6 +65,12 @@ class SquareController extends Controller
  
             if ($res->isSuccess()) {
                 // should send automatic acknowledgment mail here
+                $mail_status = 1;
+                try {
+                    Mail::to($data['email'])->send(new PaymentAcknowledgement($req->note));
+                } catch (Exception $e) {
+                    $mail_status = 0;
+                }
                 return response()->json($res->getResult());
             } else {
                 throw new \Exception();
