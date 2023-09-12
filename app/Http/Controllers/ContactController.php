@@ -19,7 +19,7 @@ class ContactController extends Controller
     public function submit(ContactRequest $request) {
         $mail_status = 1;
         try {
-            Mail::to('borromeo@momo.so-net.ne.jp')->send(new ContactMail($request->name, $request->email, $request->content));
+            Mail::to('contact@bbormer.sakura.ne.jp')->send(new ContactMail($request->name, $request->email, $request->content));
         } catch (Exception $e) {
             $mail_status = 0;
         }

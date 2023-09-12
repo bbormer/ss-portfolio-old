@@ -32,8 +32,8 @@
     <div x-data class="block mb-20 flex justify-center" >
       <a id="notification-link" href="{{ $notification_url }}" target="_blank">
         <button id="notification" class="text-center my-3 text-red-400 text-xl border rounded p-2 border-red-400">
-          <span x-show="$store.locale == 'ja'" class="text-center mb-6 font-['Zen_Maru_Gothic'] text-lg">お知らせ</span>
-          <span x-show="$store.locale != 'ja'" class="text-center mb-6 font-['Montserrat'] text-lg font-[300]">what's new</span>
+          <span x-show="$store.locale == 'ja'" class="text-center mb-6 font-ja text-lg">お知らせ</span>
+          <span x-show="$store.locale != 'ja'" class="text-center mb-6 font-en text-lg font-[300]">what's new</span>
           <span class="animate-pulse text-red-600"><i class="fa-solid fa-up-right-from-square pl-[10px]"></i></span>
         </button>
       </a>
