@@ -32,7 +32,7 @@ class PaymentAcknowledgement extends Mailable
     {
         return new Envelope(
             subject: 'Payment Acknowledgement',
-            from: new Address('borromeo@muse.ocn.ne.jp', 'suzuki satomi'),
+            from: new Address('contact@proto.bbormer.info', 'suzuki satomi'),
         );
     }
 
