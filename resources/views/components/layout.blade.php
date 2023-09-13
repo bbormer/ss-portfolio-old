@@ -84,7 +84,7 @@
                 <li><a href="/" class="text-2xl font-[200]">portfolio</a></li>
                 <li><a href="/about" class="text-2xl font-[200]">about</a></li>
                 <li><a href="/books" class="text-2xl font-[200]">books</a></li>
-                <li><a onclick="my_modal_1.showModal()" class="text-2xl font-[200]">contact</a></li>
+                <li><a href="/contact" class="text-2xl font-[200]">contact</a></li>
                 <li><a class="text-2xl font-[200]">blog</a></li>
               </ul>
             </div>
