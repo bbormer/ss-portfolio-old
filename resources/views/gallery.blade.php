@@ -17,7 +17,7 @@
         <p class="mb-10 text-xl text-gray-500 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['details-ja'] : $gallery['details-en']!!}</p>
         <p class="text-left text-xl text-gray-500 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['desc-ja'] : $gallery['desc-en']!!}</p>
         @if($gallery['availability'] == 0)
-          <p class="text-3xl font-bold mt-10 text-red-600 ">{{ __('SOLD OUT') }}</p>
+          <p class="text-3xl font-bold mt-10 text-red-600 ">SOLD</p>
         @elseif(strlen($gallery['url']) > 0)
         {{-- <button @click="window.open('{{ $gallery['url'] }}' )" class="btn btn-primary mt-10 lowercase hover:animate-pulse">{{ $locale == 'ja' ? '購入' : 'purchase'}}</button> --}}
           <a x-bind:href="`/square/{{ $gallery['id'] }}`">

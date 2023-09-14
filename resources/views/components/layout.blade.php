@@ -21,7 +21,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>suzuki satomi | まだ見たことのない景色</title>
+        <title>satomi suzuki | まだ見たことのない景色</title>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
 
   
     </head>
-    <body class="antialiased "> <!-- bg-slate-300 text-slate-500 dark:text-white -->
+    <body class="antialiased bg-[#FFFFF5] dark:bg-base-100"> <!-- bg-slate-300 text-slate-500 dark:text-white -->
 
       @php
         $showmessage = 0;
@@ -59,7 +59,7 @@
       @endphp
 
       <nav>
-        <div class="fixed z-[100] opacity-100 w-full mb-10 bg-base-100">
+        <div class="fixed z-[100] opacity-100 bg-[#FFFFF5] dark:bg-base-100 w-full mb-10"> <!-- bg-base-100  -->
           {{-- <section>
             <div x-data="{info: {{ $showmessage }}}" class="block">
               <p x-cloak x-show="info" class="text-center my-3 text-red-400 text-xl ">
@@ -74,7 +74,7 @@
               </p>
             </div>
           </section> --}}
-        <div class="navbar bg-base-100 "> <!-- bg-slate-400 -->
+        <div class="navbar"> <!-- bg-slate-400 -->
           <div class="navbar-start">
             <div class="dropdown">
               <label tabindex="0" class="btn btn-ghost lg:hidden">

@@ -68,8 +68,8 @@ Route::get('/books', function () {
 // });
 
 Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
-Route::post('/contact', [ContactController::class, 'validateForm'])->name('contact.validate');
-Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('/contact/validate', [ContactController::class, 'validateForm'])->name('contact.validate');
+// Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::get('/square/{id}', function ($id) {
     return view('square', ['gallery' => Gallery::find($id)]);

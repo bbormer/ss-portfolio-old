@@ -11,11 +11,11 @@
 
 
 <x-layout>
-  <x-slot name="title">suzuki satomi</x-slot>
+  <x-slot name="title">satomi suzuki</x-slot>
   {{-- <h1 class="text-center text-5xl md:text-7xl font-['Montserrat'] font-[200]">suzuki satomi</h1> --}}
 
   <div x-data>
-    <h2 class="text-center text-2xl mb-[30px] md:mb-[50px] {{ $locale == 'ja' ? 'font-ja' : 'font-en' }}">{{ __('the scenery you have never seen before')}}</h2>
+    <h2 class="text-center text-2xl mb-[30px] md:mb-[50px] {{ $locale == 'ja' ? 'font-ja' : 'font-en' }}">{{ __('sceneries never seen before')}}</h2>
     {{-- <h2 x-show="$store.locale == 'ja'" class="text-center text-2xl mb-[30px] md:mb-[50px] font-['Zen_Maru_Gothic']">まだ見たことのない景色</h2>
 
     <h2 x-show="$store.locale != 'ja'" class="text-center text-2xl mb-12 md:mb-20 font-['Montserrat'] font-[200] transition-opacity duration-[1000ms]">{{ __('unencountered sceneries') }}</h2> --}}
@@ -31,7 +31,7 @@
   <section class="{{ $showmessage ? 'visible' : 'invisible'}}">
     <div x-data class="block mb-20 flex justify-center" >
       <a id="notification-link" href="{{ $notification_url }}" target="_blank">
-        <button id="notification" class="text-center my-3 text-red-400 text-xl border rounded p-2 border-red-400">
+        <button id="notification" class="text-center my-3 text-red-700 text-xl border rounded p-2 border-red-700">
           <span x-show="$store.locale == 'ja'" class="text-center mb-6 font-ja text-lg">お知らせ</span>
           <span x-show="$store.locale != 'ja'" class="text-center mb-6 font-en text-lg font-[300]">what's new</span>
           <span class="animate-pulse text-red-600"><i class="fa-solid fa-up-right-from-square pl-[10px]"></i></span>

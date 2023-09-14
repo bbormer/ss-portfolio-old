@@ -6,6 +6,7 @@
     "email (required)": "メールアドレス（必須）",
     "email is invalid": "メールアドレスが無効です",
     "email is required": "メールアドレスは必須です",
+    "email is required/invalid": "メールアドレスは必須/無効です",
     "address line 1 (required)": "住所１（必須）",
     "address line 1 is required": "住所１は必須です",
     "address line 2": "住所２",
@@ -26,9 +27,8 @@
     "message is required": "メッセージは必須です",
     " mail sent failed": " メール送信失敗",
     " mail sent": " メール送信完了",
-    "the scenery you have never seen before": "まだ見たことのない景色",
+    "sceneries never seen before": "まだ見たことのない景色",
     "buy": "購入",
-    "SOLD OUT": "完売しました",
     "Payment successful": "ご購入ありがとうございました",
     "Payment failed": "決済処理が失敗しました",
     "(incl. tax)": "（税込）"

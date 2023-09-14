@@ -16,7 +16,7 @@
         <p class="text-base">{{ __('shipping')}}: {{ number_format($gallery['shipping']) }}円</p>
       </div>
 
-      <div>
+      <div class="dark-mode">
         @if(!$statusValid)
         <div id="shipInfoForm" class="p-6 border border-gray-300 sm:rounded-md w-full md:w-[40%] md:max-w-full mx-auto mt-12">
           <h1 class="text-xl text-green-500 mb-5">{{ __('shipping info') }}</h1>
@@ -316,6 +316,8 @@
   <!-- Script -->
   {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
   <!-- Square -->
+
+
   <style>
       * {
           box-sizing: border-box;
@@ -503,6 +505,31 @@
           font-size: 14px;
           line-height: 16px;
       }
+
+      /* .dark-mode {
+  background-color: #2A323C; //#080808;
+} */
+
+/* .dark-mode button {
+  background-color: #006aff;
+}
+
+.dark-mode #payment-status-container.is-success:after {
+  color: #ffffff;
+}
+
+.dark-mode #payment-status-container.is-failure:after {
+  color: #ffffff;
+}
+
+.dark-mode #payment-status-container.missing-credentials:after {
+  color: #ffffff;
+} */
+
+.dark-mode #payment-status-container {
+  background-color: #2d2d2d;
+  border-color: #2d2d2d;
+}
   </style>
   <script
       type="text/javascript"
@@ -510,12 +537,53 @@
   ></script>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
+      const darkModeCardStyle = {
+        '.input-container': {
+          borderColor: '#2D2D2D',
+          borderRadius: '6px',
+        },
+        '.input-container.is-focus': {
+          borderColor: '#006AFF',
+        },
+        '.input-container.is-error': {
+          borderColor: '#ff1600',
+        },
+        '.message-text': {
+          color: '#999999',
+        },
+        '.message-icon': {
+          color: '#999999',
+        },
+        '.message-text.is-error': {
+          color: '#ff1600',
+        },
+        '.message-icon.is-error': {
+          color: '#ff1600',
+        },
+        input: {
+          backgroundColor: '#2D2D2D',
+          color: '#000000',
+          fontFamily: 'helvetica neue, sans-serif',
+          fontSize: '16px',
+        },
+        'input::placeholder': {
+          color: '#999999',
+        },
+        'input.is-error': {
+          color: '#ff1600',
+        },
+           
+      };
+
       const appId = "{{ config('square.application_id') }}";
       const locationId = "{{ config('square.location_id') }}";
       const idempotencyKey = "{{ uniqid() }}";
 
       async function initializeCard(payments) {
-          const card = await payments.card();
+          // const card = await payments.card();
+          const card = await payments.card({
+            style: darkModeCardStyle,
+          });
           await card.attach('#card-container');
           return card;
       }
@@ -634,7 +702,7 @@
                   const token = await tokenize(paymentMethod);
                   const paymentResults = await createPayment(token);
                   displayPaymentResults('SUCCESS');
-                  console.debug('Payment Success', paymentResults);
+                  console.log('Payment Success', paymentResults.payment.id);
               } catch (e) {
                 console.log('after createPayment failed');
                   cardButton.disabled = false;

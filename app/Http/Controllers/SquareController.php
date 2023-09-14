@@ -88,7 +88,7 @@ class SquareController extends Controller
 
         $formFields = $request->validate([
             'name' => 'required',
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email:filter,rfc,dns'],
             'address1' => 'required',
             'address2' => 'nullable',
             'city' => 'required',

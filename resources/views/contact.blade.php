@@ -1,4 +1,5 @@
 @php
+  use Illuminate\Support\MessageBag;
   $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
   App::setLocale($locale);
 @endphp
@@ -9,7 +10,8 @@
   <div class="max-w-screen-lg mx-auto mt-12">
     <div class="flex flex-col justify-center w-auto lg:w-[60%] max-w-5xl m-auto">
  
-      <form method="POST" action="{{ route('contact.submit') }}" class=" w-auto lg:w-[100%] max-w-5xl">
+      <form method="POST" action="/contact/validate" class=" w-auto lg:w-[100%] max-w-5xl">
+      {{-- <form method="POST" action="{{ route('contact.validate') }}" class=" w-auto lg:w-[100%] max-w-5xl"> --}}
       @csrf
         <div>
 
@@ -30,9 +32,10 @@
               {{-- <label for="email">Email address</label> --}}
               <input name="email" type="text" class="form-control w-[95%] lg:w-[400px] rounded border-green-300 border-2 p-2 mx-auto lg:mx-0" id="email" aria-describedby="emailHelp"
                   placeholder=" {{ __('email (required)') }}" value="{{ old('email') }}"> 
-                  @error('name')
-                  <p class="text-red-500 text-sm mt-1">{{ __('email is required') }}</p>
-                @enderror
+              @error('email')
+                {{ $errors }}
+                <p class="text-red-500 text-sm mt-1">{{ __('email is required/invalid') }}</p>
+              @enderror
           </div>
           <div class="form-group mb-6 {{ $errors->has('name') ? 'has-error' : '' }}">
               {{-- <label for="exampleInputPassword1">Comment</label> --}}
