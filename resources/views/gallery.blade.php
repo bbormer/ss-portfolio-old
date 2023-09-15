@@ -14,8 +14,8 @@
     <div class="hero-content text-center text-neutral-content">
       <div class="max-w-xl font-[300] text-xl {{ $locale == 'ja' ? 'font-ja' : 'font-en'}}">
         <h1 class="my-5 leading-[3.75rem] text-4xl font-xl text-gray-500 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['title-ja'] : $gallery['title-en'] !!}</h1>
-        <p class="mb-10 text-xl text-gray-500 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['details-ja'] : $gallery['details-en']!!}</p>
-        <p class="text-left text-xl text-gray-500 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['desc-ja'] : $gallery['desc-en']!!}</p>
+        <div class="mb-10 text-xl !text-gray-700 dark:!text-gray-400">{!! $locale == 'ja' ? $gallery['details-ja'] : $gallery['details-en']!!}</div>
+        <div class="text-left text-xl text-gray-700 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['desc-ja'] : $gallery['desc-en']!!}</div>
         @if($gallery['availability'] == 0)
           <p class="text-3xl font-bold mt-10 text-red-600 ">SOLD</p>
         @elseif(strlen($gallery['url']) > 0)

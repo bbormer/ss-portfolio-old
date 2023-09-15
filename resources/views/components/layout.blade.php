@@ -131,7 +131,7 @@
 
       <footer class="footer footer-center pt-10 pb-10 fade-in">
         <div>
-          <p class="text-lg font-en font-[200]">© 2023 suzuki satomi</p>
+          <p class="text-lg font-en font-[400]">© 2023 satomi suzuki</p>
           <a href="https://www.instagram.com/satomi_szk/" target="_blank"><i class="fa-brands fa-instagram text-4xl hover:animate-pulse"></i></a>
         </div> 
        </footer>
