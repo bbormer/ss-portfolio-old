@@ -71,11 +71,120 @@
               @error('email')
                 @if (str_contains($message, 'valid')) 
                   <p class="text-red-500 text-sm mt-1">{{ __('email is invalid') }}</p>
-                @else
+                  @else
                   <p class="text-red-500 text-sm mt-1">{{ __('email is required') }}</p>
-                @endif
-              @enderror
-            </label>
+                  @endif
+                  @enderror
+                </label>
+                <label x-data="{ telephone: ''}" class="block mb-6">
+                  <input
+                    id="formPhone"
+                    name="phone"
+                    type="text"
+                    class="
+                      block
+                      w-full
+                      mt-1
+                      border-gray-300
+                      rounded-md
+                      shadow-sm
+                      focus:border-indigo-300
+                      focus:ring
+                      focus:ring-indigo-200
+                      focus:ring-opacity-50
+                      placeholder:text-green-500 dark:placeholder-green-700
+                    "
+                    placeholder="{{ __('phone (required)') }}"
+                    value="{{ old('phone') }}"
+                  />
+                  @error('phone')
+                    @if (str_contains($message, 'valid')) 
+                      <p class="text-red-500 text-sm mt-1">{{ __('phone number is invalid') }}</p>
+                    @else
+                      <p class="text-red-500 text-sm mt-1">{{ __('phone number is required') }}</p>
+                    @endif
+                  @enderror              
+                </label>
+                <label class="block mb-6">
+                  <input
+                    id="formZip"
+                    name="zip"
+                    type="text"
+                    class="
+                      block
+                      w-full
+                      mt-1
+                      border-gray-300
+                      rounded-md
+                      shadow-sm
+                      focus:border-indigo-300
+                      focus:ring
+                      focus:ring-indigo-200
+                      focus:ring-opacity-50
+                      placeholder:text-green-500 dark:placeholder-green-700
+                    "
+                    placeholder="{{ __('postal code (required | auto-fill address)') }}"
+                    value="{{ old('zip') }}"
+                  />
+                  @error('zip')
+                    @if (str_contains($message, 'valid')) 
+                      <p class="text-red-500 text-sm mt-1">{{ __('postal code is invalid') }}</p>
+                    @else
+                      <p class="text-red-500 text-sm mt-1">{{ __('postal code is required') }}</p>
+                    @endif
+                  @enderror
+                </label>
+                <label class="block mb-6">
+                  <input
+                    id="formState"
+                    name="state"
+                    type="text"
+                    class="
+                      block
+                      w-full
+                      mt-1
+                      border-gray-300
+                      rounded-md
+                      shadow-sm
+                      focus:border-indigo-300
+                      focus:ring
+                      focus:ring-indigo-200
+                      focus:ring-opacity-50
+                      {{-- {{ $locale == 'ja' ? 'font-ja' : 'font-en'}} --}}
+                      placeholder:text-green-500 dark:placeholder-green-700
+                      "
+                    placeholder="{{ __('prefecture (required)') }}"
+                    value="{{ old('state') }}"
+                  />
+                  @error('state')
+                    <p class="text-red-500 text-sm mt-1">{{ __('prefecture is required')}}</p>
+                  @enderror
+                </label>
+                <label class="block mb-6">
+                  <input
+                    id="formCity"
+                    name="city"
+                    type="text"
+                    class="
+                      block
+                      w-full
+                      mt-1
+                      border-gray-300
+                      rounded-md
+                      shadow-sm
+                      focus:border-indigo-300
+                      focus:ring
+                      focus:ring-indigo-200
+                      focus:ring-opacity-50
+                      placeholder:text-green-500 dark:placeholder-green-700
+                    "
+                    placeholder="{{ __('city (required)')}}"
+                    value="{{ old('city') }}"
+                  />
+                  @error('city')
+                  <p class="text-red-500 text-sm mt-1">{{ __('city is required') }}</p>
+                @enderror
+                </label>
             <label class="block mb-6">
               <input
                 id="formAddress1"
@@ -126,86 +235,8 @@
               @error('address2')
               @enderror
             </label>
-            <label class="block mb-6">
-              <input
-                id="formCity"
-                name="city"
-                type="text"
-                class="
-                  block
-                  w-full
-                  mt-1
-                  border-gray-300
-                  rounded-md
-                  shadow-sm
-                  focus:border-indigo-300
-                  focus:ring
-                  focus:ring-indigo-200
-                  focus:ring-opacity-50
-                  placeholder:text-green-500 dark:placeholder-green-700
-                "
-                placeholder="{{ __('city (required)')}}"
-                value="{{ old('city') }}"
-              />
-              @error('city')
-              <p class="text-red-500 text-sm mt-1">{{ __('city is required') }}</p>
-            @enderror
-            </label>
-            <label class="block mb-6">
-              <input
-                id="formState"
-                name="state"
-                type="text"
-                class="
-                  block
-                  w-full
-                  mt-1
-                  border-gray-300
-                  rounded-md
-                  shadow-sm
-                  focus:border-indigo-300
-                  focus:ring
-                  focus:ring-indigo-200
-                  focus:ring-opacity-50
-                  {{-- {{ $locale == 'ja' ? 'font-ja' : 'font-en'}} --}}
-                  placeholder:text-green-500 dark:placeholder-green-700
-                  "
-                placeholder="{{ __('state/province (required)') }}"
-                value="{{ old('state') }}"
-              />
-              @error('state')
-                <p class="text-red-500 text-sm mt-1">{{ __('state is required')}}</p>
-              @enderror
-            </label>
-            <label class="block mb-6">
-              <input
-                id="formZip"
-                name="zip"
-                type="text"
-                class="
-                  block
-                  w-full
-                  mt-1
-                  border-gray-300
-                  rounded-md
-                  shadow-sm
-                  focus:border-indigo-300
-                  focus:ring
-                  focus:ring-indigo-200
-                  focus:ring-opacity-50
-                  placeholder:text-green-500 dark:placeholder-green-700
-                "
-                placeholder="{{ __('zip/postal code (required)') }}"
-                value="{{ old('zip') }}"
-              />
-              @error('zip')
-                @if (str_contains($message, 'valid')) 
-                  <p class="text-red-500 text-sm mt-1">{{ __('zip/postal code is invalid') }}</p>
-                @else
-                  <p class="text-red-500 text-sm mt-1">{{ __('zip/postal code is required') }}</p>
-                @endif
-              @enderror
-            </label>
+            
+            
             {{-- <label class="block mb-6">
               <input
                 name="country"
@@ -227,35 +258,7 @@
                 value="{{ old('country') }}"
               />
             </label> --}}
-            <label x-data="{ telephone: ''}" class="block mb-6">
-              <input
-                id="formPhone"
-                name="phone"
-                type="text"
-                class="
-                  block
-                  w-full
-                  mt-1
-                  border-gray-300
-                  rounded-md
-                  shadow-sm
-                  focus:border-indigo-300
-                  focus:ring
-                  focus:ring-indigo-200
-                  focus:ring-opacity-50
-                  placeholder:text-green-500 dark:placeholder-green-700
-                "
-                placeholder="{{ __('phone (required)') }}"
-                value="{{ old('phone') }}"
-              />
-              @error('phone')
-                @if (str_contains($message, 'valid')) 
-                  <p class="text-red-500 text-sm mt-1">{{ __('phone number is invalid') }}</p>
-                @else
-                  <p class="text-red-500 text-sm mt-1">{{ __('phone number is required') }}</p>
-                @endif
-              @enderror              
-            </label>
+            
             
             <div class="mb-6">
               <button
@@ -719,4 +722,40 @@
           });
       });
 
+      // 郵便番号検索
+      const formZip = document.getElementById('formZip');
+      const formAddress1 = document.getElementById('formAddress1');
+      const formCity = document.getElementById('formCity');
+      const formState = document.getElementById('formState');
+
+      formZip.addEventListener('focusout', ()=>{
+        if (formZip.value != "") {
+    
+            let api = 'https://zipcloud.ibsnet.co.jp/api/search?zipcode=';
+            let url = api + formZip.value;
+            
+            fetch(url, {
+                timeout: 10000, //タイムアウト時間
+            })
+            .then((response)=>{
+                //</tbody>error.textContent = ''; //HTML側のエラーメッセージ初期化*/
+                return response.json();  
+            })
+            .then((data)=>{
+            /* if(data.status === 400){ //エラー時
+                    alert("error.textContent");
+                }else*/ if(data.results === null){
+                    alert('郵便番号から住所が見つかりませんでした。');
+                    address.value = "";
+                } else {
+                    formState.value = data.results[0].address1;
+                    formCity.value = data.results[0].address2;
+                    formAddress1.value = data.results[0].address3;
+                }
+            })
+            .catch((ex)=>{ //例外処理
+                console.log(ex);
+            });
+        }
+    }); 
   </script>

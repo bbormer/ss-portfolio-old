@@ -28,6 +28,7 @@
   ])
     echo "is authenticated"
   @endauth
+
   <section class="{{ $showmessage ? 'visible' : 'invisible'}}">
     <div x-data class="block mb-20 flex justify-center" >
       <a id="notification-link" href="{{ $notification_url }}" target="_blank">
