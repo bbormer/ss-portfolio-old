@@ -746,7 +746,7 @@
                     alert("error.textContent");
                 }else*/ if(data.results === null){
                     alert('郵便番号から住所が見つかりませんでした。');
-                    address.value = "";
+                    // address.value = "";
                 } else {
                     formState.value = data.results[0].address1;
                     formCity.value = data.results[0].address2;
