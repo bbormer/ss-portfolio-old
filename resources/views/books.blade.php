@@ -41,8 +41,8 @@
       </div>
     </div>
     </div>
-    <div class="card-body font-['Zen_Maru_Gothic'] font-bold">
-      <h2 class="mb-5 card-title text-2xl">{{ $locale == 'ja' ? 'ぼくはりんご' : 'I am an APPLE'}}</h2>
+    <div class="card-body {{ $locale == 'ja' ? 'font-ja' : 'font-en'}} font-bold">
+      <h2 class="mb-5 card-title text-2xl">{{ __('I am an APPLE')}}</h2>
       <div class="mb-10 font-[300] {{ $locale == 'ja' ? 'font-ja' : 'font-en'}}">
         <p class="text-xl">{{ $locale == 'ja' ? '「ぼくはいったい誰で、何のために生まれてきたんだろう？」自分を探すりんごが自分を創った人と、その思いに出会った時に見つける本当のアイデンティティと愛のおはなし。' : 'An illustrated story for all ages of an apple discovering his identity in God’s love.'}}</p>
       </div>
