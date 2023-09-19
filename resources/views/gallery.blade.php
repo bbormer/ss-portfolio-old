@@ -16,6 +16,15 @@
         <h1 class="my-5 leading-[3.75rem] text-4xl font-xl text-gray-500 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['title-ja'] : $gallery['title-en'] !!}</h1>
         <div class="mb-10 text-xl !text-gray-700 dark:!text-gray-400">{!! $locale == 'ja' ? $gallery['details-ja'] : $gallery['details-en']!!}</div>
         <div class="text-left text-xl text-gray-700 dark:text-gray-400">{!! $locale == 'ja' ? $gallery['desc-ja'] : $gallery['desc-en']!!}</div>
+        {{-- @if($gallery['sold'] == 1)
+          <p class="text-3xl font-bold mt-10 text-red-600 ">SOLD</p>
+        @elseif ($gallery['not-for-sale'] != 1)
+          <a x-bind:href="`/square/{{ $gallery['id'] }}`">
+            <button  class="btn btn-primary mt-10 lowercase hover:animate-pulse">
+              {{ __('buy') }}
+            </button>
+          </a>
+        @endif --}}
         @if($gallery['availability'] == 0)
           <p class="text-3xl font-bold mt-10 text-red-600 ">SOLD</p>
         @elseif(strlen($gallery['url']) > 0)

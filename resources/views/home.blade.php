@@ -56,6 +56,7 @@
  @endphp
 
    <div x-data class="flex flex-row flex-wrap justify-around items-start max-w-screen-lg mt-8 mx-auto">
+    {{-- @foreach(array_reverse($galleries) as $image) --}}
     @foreach($galleries as $image)
       {{-- <div class="tooltip tooltip-top" data-tip="more..."> --}}
         <div class="card card-compact w-80 bg-base-100 shadow-xl rounded-none mb-10">

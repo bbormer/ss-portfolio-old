@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\SquareController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GalleryController;
  
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +42,18 @@ Route::get('/', function () {
     return view('home', [ 'galleries' => Gallery::all()[0]]);
 });
 
+// Route::get('/gallery/{gallery}', [GalleryController::class, 'show']);
+// Route::get('/gallery/{gallery}', function (Gallery $gallery) {
+//     // return response('to gallery ' . $id);
+//     return view('gallery', ['gallery' => $gallery]);
+// });
 Route::get('/gallery/{id}', function ($id) {
-    // return response('to gallery ' . $id);
-    return view('gallery', ['gallery' => Gallery::find($id)]);
+    $gallery = Gallery::find($id);
+    if ($gallery) {
+        return view('gallery', ['gallery' => $gallery]);
+    } else {
+        abort('404');
+    }
 });
 
 Route::get('/about', function () {

@@ -32,5 +32,8 @@
     "Payment successful": "ご購入ありがとうございました",
     "Payment failed": "決済処理が失敗しました",
     "(incl. tax)": "（税込）",
-    "I am an APPLE": "ぼくはりんご"
+    "I am an APPLE": "ぼくはりんご",
+    "Thank you for ordering": "ご注文ありがとうございます",
+    "Payment ID": "決済ID",
+    "order details": "注文詳細"
 }

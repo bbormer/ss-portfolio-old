@@ -14,15 +14,17 @@ class PaymentAcknowledgement extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public string $x;
+    public string $note;
+    public string $id;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(string $x)
+    public function __construct(string $note, string $id)
     {
         //
-        $this->x = $x;
+        $this->note = $note;
+        $this->id = $id;
     }
 
     /**
@@ -44,7 +46,8 @@ class PaymentAcknowledgement extends Mailable
         return new Content(
             view: 'emails.payment',
             with: [
-                'note' => $this->x,
+                'note' => $this->note,
+                'id' => $this->id,
             ],
         );
     }

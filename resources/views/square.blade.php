@@ -655,7 +655,7 @@
 
       // Helper method for displaying the Payment Status on the screen.
       // status is either SUCCESS or FAILURE;
-      function displayPaymentResults(status) {
+      function displayPaymentResults(status,  id) {
         console.log('entering displayPaymentResults')
           const statusContainer = document.getElementById(
               'payment-status-container'
@@ -663,6 +663,7 @@
           if (status === 'SUCCESS') {
               statusContainer.classList.remove('is-failure');
               statusContainer.classList.add('is-success');
+              alert(`決済ID: ${id}`)
               // editShipInfo.style.visibility = "hidden"
               // cardButton.disabled = false;
               @php
@@ -704,12 +705,13 @@
                   cardButton.disabled = true;
                   const token = await tokenize(paymentMethod);
                   const paymentResults = await createPayment(token);
-                  displayPaymentResults('SUCCESS');
+                  console.log(paymentResults)
+                  displayPaymentResults('SUCCESS', paymentResults.payment.id);
                   console.log('Payment Success', paymentResults.payment.id);
               } catch (e) {
                 console.log('after createPayment failed');
                   cardButton.disabled = false;
-                  displayPaymentResults('FAILURE');
+                  displayPaymentResults('FAILURE', '');
                   console.error(e.message);
               }
           }

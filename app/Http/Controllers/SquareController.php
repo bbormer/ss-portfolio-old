@@ -65,9 +65,10 @@ class SquareController extends Controller
  
             if ($res->isSuccess()) {
                 // should send automatic acknowledgment mail here
+                $payment_id = $res->getResult()->getPayment()->getId();
                 $mail_status = 1;
                 try {
-                    Mail::to($data['email'])->send(new PaymentAcknowledgement($req->note));
+                    Mail::to($data['email'])->send(new PaymentAcknowledgement($req->note, $payment_id));
                 } catch (Exception $e) {
                     $mail_status = 0;
                 }

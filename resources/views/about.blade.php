@@ -24,13 +24,13 @@
     <div class="chat chat-start mb-5">
       <div class="chat-bubble bg-gray-200 dark:bg-[#2A323C] text-black dark:text-[#A6ADBA]">{!! $locale == 'ja' ? '見る人を励ますような力強さと温もりと癒しを感じる。' : 'Feel strength, warmth, and healing that encourage the viewer.' !!}</div>
       </div>
-    <div class="chat chat-start mb-5">
+    <div class="chat chat-end mb-5">
       <div class="chat-bubble bg-gray-200 dark:bg-[#2A323C] text-black dark:text-[#A6ADBA]">{!! $locale == 'ja' ? '純真で思いやりある人柄と深い思想が絵を見るとわかる。' : 'Her pure and thoughtful personality and deep thoughts are evident in her paintings.' !!}</div>
       </div>
     <div class="chat chat-end mb-5">
       <div class="chat-bubble bg-gray-200 dark:bg-[#2A323C] text-black dark:text-[#A6ADBA]">{!! $locale == 'ja' ? '「人間の美しさはその人が内面にもつグラデーションカラーの幅」と、彼女が話す美的センスや人生に対する希望、人と関わることで喜びを見出す情熱が作品からも感じられる。' : 'As she says “The beauty of a person is the range of gradation of colors that a person has inside.” her works convey her aesthetic sense, her hope for life, and her passion for finding joy in interacting with people.' !!}</div>
       </div>
-    <div class="chat chat-end mb-5">
+    <div class="chat chat-start mb-5">
       <div class="chat-bubble bg-gray-200 dark:bg-[#2A323C] text-black dark:text-[#A6ADBA]">{!! $locale == 'ja' ? '彼女の絵を見ていると童心の大切さを思い出す。' : 'Looking at her pictures reminds me of the importance of heart of a child.' !!}</div>
       </div>
     </div>

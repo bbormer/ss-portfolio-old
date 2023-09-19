@@ -1,5 +1,10 @@
-<h1>ご注文ありがとうございます</h1>
-{{-- <p><strong>From:</strong><br>{{ $name }} ({{ $email }})</p>
+@php
+  $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+  App::setLocale($locale);
+@endphp
 
-<p><strong>Message:</strong><br>{{ $content }}</p> --}}
+<h1>{{ __('Thank you for ordering') }}</h1>
+
+<h2>{{ __('Payment ID') }} : {{ $id }}</h2>
+<h2>{{ __('order details') }}</h2>
 <p>{{ $note }}</p>
