@@ -99,7 +99,7 @@
                 <li><a href="/about" class="text-2xl font-[200]">about</a></li>
                 <li><a href="/books" class="text-2xl font-[200]">books</a></li>
                 <li><a href="/contact" class="text-2xl font-[200]">contact</a></li>
-                <li><a class="text-2xl font-[200]">blog</a></li>
+                <li><a href="https://blogs.satomisuzuki.info" target="_blank" rel="noopener noreferrer" class="text-2xl font-[200]">blog</a></li>
               </ul>
             </div>
             <a class="btn btn-ghost normal-case text-xl hidden">daisyUI</a>
@@ -111,7 +111,7 @@
               <li><a href="/books" class="text-2xl font-[300] hover:animate-pulse">books</a></li>
               <li><a href="/contact" class="text-2xl font-[300] hover:animate-pulse">contact</a></li>
               {{-- <li><a onclick="my_modal_1.showModal()" class="text-2xl font-[300] hover:animate-pulse">contact</a></li> --}}
-              <li><a class="text-2xl font-[300] hover:animate-pulse">blog</a></li>
+              <li><a href="https://blogs.satomisuzuki.info" target="_blank" rel="noopener noreferrer" class="text-2xl font-[300] hover:animate-pulse">blog</a></li>
             </ul>
           </div>
           <div class="navbar-end hidden">
