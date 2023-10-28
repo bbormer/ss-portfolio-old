@@ -87,7 +87,7 @@
     @endforeach
   </div>
   <p class="text-center opacity-75">
-    {!! $locale == 'ja' ? 'オーダー承ります。コンタクトフォームでご相談ください。' : '<em>My works are available for international shipment.<br>Please feel free to inquire for a quotation via the contact page.</em>' !!}
+    {!! $locale == 'ja' ? 'オーダー承ります。コンタクトフォームでご相談ください。' : '<em>My works are available for international shipment.<br>For a quotation, please inquire via the contact page.</em>' !!}
   </p>
 </x-layout>
 
