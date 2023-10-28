@@ -5,7 +5,8 @@
 @endphp
 
 <x-layout>
-  <x-slot name="title">contact<br><span style="font-size:40%">(inquiries, order quotations)</span></x-slot>
+  <x-slot name="title">contact</x-slot>
+  {{-- <x-slot name="title">contact<br><span style="font-size:40%">(inquiries, order quotations)</span></x-slot> --}}
   {{-- <x-slot name="title">contact<br><span style="font-size:40%">{{ $locale == 'ja' ? '（問い合わせ・見積り依頼）' : '(inquiries, order quotations)'}}</span></x-slot> --}}
   
   <div class="max-w-screen-lg mx-auto mt-12">
