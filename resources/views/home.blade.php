@@ -87,7 +87,8 @@
     @endforeach
   </div>
   <p class="text-center opacity-75">
-    {!! $locale == 'ja' ? 'オーダー承ります。コンタクトフォームでご相談ください。' : '<em>My works are available for international shipment.<br>For a quotation, please inquire via the contact page.</em>' !!}
+    {!! $locale == 'ja' ? 'オーダー承ります。<br><a class="underline" href="https://satomisuzuki.info/contact">コンタクトフォーム</a> でご相談ください。' : '<em>Available for international shipment.<br><a class="underline" href="https://satomisuzuki.info/contact">Request</a> a quotation.</em>' !!}
+    {{-- {!! $locale == 'ja' ? 'オーダー承ります。<br><a class="underline" href="https://satomisuzuki.info/contact">コンタクトフォーム</a> でご相談ください。' : '<em>My works are available for international shipment.<br>Please feel free to <a class="underline" href="https://satomisuzuki.info/contact">request</a> a quotation.</em>' !!} --}}
   </p>
 </x-layout>
 
