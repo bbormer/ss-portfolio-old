@@ -60,6 +60,9 @@
             @endif
           </div>
             {{-- </form> --}}
+            {{-- <p class="text-center text-lg">
+              {!! $locale == 'ja' ? 'オーダー承ります。ご相談ください。' : 'Please feel free to inquire for overseas order' !!}
+            </p> --}}
         </div>
       
         {{-- <p class="py-4">Press ESC key or click the button below to close</p> --}}

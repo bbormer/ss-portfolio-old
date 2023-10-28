@@ -20,14 +20,14 @@
 
     <h2 x-show="$store.locale != 'ja'" class="text-center text-2xl mb-12 md:mb-20 font-['Montserrat'] font-[200] transition-opacity duration-[1000ms]">{{ __('unencountered sceneries') }}</h2> --}}
   </div>
-  @auth
+  {{-- @auth
   auth()->login(User:create[
     'name' => 'bobby',
     'email' => 'borromeo@momo.so-net.ne.jp',
     'password' => 'dummy'
   ])
     echo "is authenticated"
-  @endauth
+  @endauth --}}
 
   <section class="{{ $showmessage ? 'visible' : 'invisible'}}">
     <div x-data class="block mb-20 flex justify-center" >
@@ -86,6 +86,9 @@
       {{-- </div> --}}
     @endforeach
   </div>
+  <p class="text-center opacity-75">
+    {!! $locale == 'ja' ? 'オーダー承ります。コンタクトフォームでご相談ください。' : '<em>My works are available for international shipment.<br>Please feel free to inquire for a quotation via the contact page.</em>' !!}
+  </p>
 </x-layout>
 
 

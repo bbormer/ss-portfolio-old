@@ -95,7 +95,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h22M4 13h22M4 20h22" /></svg>
               </label>
               <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a href="/" class="text-2xl font-[200]">portfolio</a></li>
+                <li><a href="/" class="text-2xl font-[200]">gallery</a></li>
                 <li><a href="/about" class="text-2xl font-[200]">about</a></li>
                 <li><a href="/books" class="text-2xl font-[200]">books</a></li>
                 <li><a href="/contact" class="text-2xl font-[200]">contact</a></li>
@@ -106,7 +106,7 @@
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1  font-['Montserrat'] font-[300] text-xl">
-              <li><a href="/" class="text-2xl font-[300] hover:animate-pulse">portfolio</a></li>
+              <li><a href="/" class="text-2xl font-[300] hover:animate-pulse">gallery</a></li>
               <li><a href="/about" class="text-2xl font-[300] hover:animate-pulse">about</a></li>
               <li><a href="/books" class="text-2xl font-[300] hover:animate-pulse">books</a></li>
               <li><a href="/contact" class="text-2xl font-[300] hover:animate-pulse">contact</a></li>
@@ -140,7 +140,7 @@
 
       <footer class="footer footer-center pt-10 pb-10 fade-in">
         <div>
-          <p class="text-lg font-en font-[400]">© 2023 satomi suzuki</p>
+          <p class="text-lg font-en font-[400]">© 2020 satomi suzuki</p>
           <a href="https://www.instagram.com/satomi_szk/" target="_blank"><i class="fa-brands fa-instagram text-4xl hover:animate-pulse"></i></a>
         </div> 
        </footer>
