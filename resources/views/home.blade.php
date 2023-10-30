@@ -54,6 +54,10 @@
  @php
    
  @endphp
+    <p class="text-center opacity-75"><span class="single-line">{!! $locale == 'ja' ? '作品のお問い合わせやオーダーについてはお気軽に<a class="underline" href="https://satomisuzuki.info/contact">ご連絡</a>ください。' : '<em>My works are available for international shipment. Please feel free to <a class="underline" href="https://satomisuzuki.info/contact">request</a> a quotation.</em>' !!}</span><span class="double-line">{!! $locale == 'ja' ? '作品のお問い合わせやオーダーについては<br>お気軽に<a class="underline" href="https://satomisuzuki.info/contact">ご連絡</a>ください。' : '<em>My works are available for international shipment.<br>Please feel free to <a class="underline" href="https://satomisuzuki.info/contact">request</a> a quotation.</em>' !!}</span>
+      {{-- {!! $locale == 'ja' ? '作品のお問い合わせやオーダーについてはお気軽に<a class="underline" href="https://satomisuzuki.info/contact">ご連絡</a>ください。' : '<em>My works are available for international shipment. Please feel free to <a class="underline" href="https://satomisuzuki.info/contact">request</a> a quotation.</em>' !!} --}}
+      {{-- {!! $locale == 'ja' ? 'オーダー承ります。<br><a class="underline" href="https://satomisuzuki.info/contact">コンタクトフォーム</a> でご相談ください。' : '<em>My works are available for international shipment.<br>Please feel free to <a class="underline" href="https://satomisuzuki.info/contact">request</a> a quotation.</em>' !!} --}}
+    </p>
 
    <div x-data class="flex flex-row flex-wrap justify-around items-start max-w-screen-lg mt-8 mx-auto">
     {{-- @foreach(array_reverse($galleries) as $image) --}}
@@ -86,10 +90,6 @@
       {{-- </div> --}}
     @endforeach
   </div>
-  <p class="text-center opacity-75">
-    {!! $locale == 'ja' ? 'オーダー承ります。<br><a class="underline" href="https://satomisuzuki.info/contact">コンタクトフォーム</a> でご相談ください。' : '<em>Available for international shipment.<br><a class="underline" href="https://satomisuzuki.info/contact">Request</a> a quotation.</em>' !!}
-    {{-- {!! $locale == 'ja' ? 'オーダー承ります。<br><a class="underline" href="https://satomisuzuki.info/contact">コンタクトフォーム</a> でご相談ください。' : '<em>My works are available for international shipment.<br>Please feel free to <a class="underline" href="https://satomisuzuki.info/contact">request</a> a quotation.</em>' !!} --}}
-  </p>
 </x-layout>
 
 
@@ -128,3 +128,19 @@
     }, 10000);
   })
 </script>
+<style>
+  .double-line {
+    display: none;
+  }
+  .single-line {
+    display: block;
+  }
+  @media(width < 640px) {
+    .single-line {
+      display: none;
+    }
+    .double-line {
+      display: block;
+    }
+  }
+</style>
