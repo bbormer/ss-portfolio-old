@@ -149,7 +149,7 @@
         document.addEventListener('alpine:init', () => {
           Alpine.store('locale', window.navigator.language)
         })
-        document.head.querySelector('meta[name="description"]').content = `${window.navigator.language.substring(0,2) == 'ja' ? "日本語メタデスクリプション" : "English meta description"}`;
+        // document.head.querySelector('meta[name="description"]').content = `${window.navigator.language.substring(0,2) == 'ja' ? "日本語メタデスクリプション" : "English meta description"}`;
         // document.title = `${window.navigator.language.substring(0,2) == 'ja' ? "satomi suzuki | まだ見たことのない景色" : "satomi suzuki | sceneries never seen before"}`
         document.title = `satomi suzuki | {{ __('sceneries never seen before') }}`
       </script>
