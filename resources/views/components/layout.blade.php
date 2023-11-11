@@ -12,7 +12,7 @@
         <!-- SEO tags -->
         <meta name='robots' content='none' />
         {{-- <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /> --}}
-        <meta name="description" lang="ja-jp" content="日本語メタデスクリプション">
+        <meta name="description" lang="ja-jp" content="「まだ見たことのない景色」をテーマに彩り豊かな物語をキャンバスに描く。自由で鮮やかな世界にきっとあなたも癒され元気になる。作家satomi suzukiのオフィシャルウェブサイト。作品の出発点といえる思想や日々の出来事はブログにて。">
         {{-- <link rel="canonical" href="https://efct.sakura.ne.jp/site/" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="og:type" content="website" />
