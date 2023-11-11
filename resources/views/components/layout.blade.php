@@ -10,19 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- SEO tags -->
-        <meta name='robots' content='none' />
-        {{-- <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /> --}}
-        <meta name="description" lang="ja-jp" content="「まだ見たことのない景色」をテーマに彩り豊かな物語をキャンバスに描く。自由で鮮やかな世界にきっとあなたも癒され元気になる。作家satomi suzukiのオフィシャルウェブサイト。作品の出発点といえる思想や日々の出来事はブログにて。">
-        {{-- <link rel="canonical" href="https://efct.sakura.ne.jp/site/" />
-        <meta property="og:locale" content="ja_JP" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="立川福音自由教会 - 立川の正統的なプロテスタントのキリスト教会" />
-        <meta property="og:description" content="立川福音自由教会は、正統的なプロテスタントのキリスト教会です。｢福音」とは、聖書を誤りなき神のことばと信じるという意味です。｢自由」とは、政治権力や組織的な強制からの自由を意味します。私たちの教会は、1989年から東京武蔵野福音自由教会の一会堂として礼拝を始め、1997年に独立しました。組織的には新しくても、教えにおいては、キリスト教会二千年来の伝統を大切にしており、安心していただけます。" />
-        <meta property="og:url" content="https://efct.sakura.ne.jp/site/" />
-        <meta property="og:site_name" content="立川福音自由教会" />
-        <meta property="article:modified_time" content="2023-09-03T10:55:50+00:00" />
-        <meta property="og:image" content="http://efct.sakura.ne.jp/site/wp-content/uploads/2018/10/stg_with_credit2-126x300.jpg" /> --}}
-
+        {{-- <meta name='robots' content='none' /> --}}
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <meta name="description" content="「まだ見たことのない景色」をテーマに彩り豊かな物語をキャンバスに描く。自由で鮮やかな世界にきっとあなたも癒され元気になる。作家satomi suzukiのオフィシャルウェブサイト。作品の出発点といえる思想や日々の出来事はブログにて。">
+        <meta property="og:description" content="「まだ見たことのない景色」をテーマに彩り豊かな物語をキャンバスに描く。自由で鮮やかな世界にきっとあなたも癒され元気になる。作家satomi suzukiのオフィシャルウェブサイト。作品の出発点といえる思想や日々の出来事はブログにて。" />
+       
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -32,21 +24,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
-        {{-- <script type="text/javascript" src="//webfonts.sakura.ne.jp/js/sakurav3.js"></script> --}}
-        <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/322d36de0e.js" crossorigin="anonymous"></script>
         <!-- tailwind vite -->
         @vite('resources/css/app.css') 
-        <!-- Google tag (gtag.js) -->
-        {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JMJRRL035H"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'G-JMJRRL035H');
-        </script> --}}
-        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R518KL8Y1N"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
