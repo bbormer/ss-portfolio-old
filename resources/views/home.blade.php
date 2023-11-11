@@ -135,7 +135,8 @@
   .single-line {
     display: block;
   }
-  @media(width < 640px) {
+  /* @media(min-width: 375px) { */
+    @media only screen and (max-width: 375px) {
     .single-line {
       display: none;
     }

@@ -10,36 +10,44 @@
   <div class="lg:w-[90%] max-w-screen-lg mt-12 mx-auto">
     <div class="card lg:card-side bg-base-100 shadow-xl">
       <div class="lg:w-[100%] max-w-screen-lg my-0 mx-auto">
-        <div class="carousel w-full">
-          <div id="slide1" class="carousel-item relative w-full">
-            <img src="/images/cover.jpg" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide4" class="btn btn-circle">❮</a> 
-              <a href="#slide2" class="btn btn-circle">❯</a>
+        @if($locale == 'ja')
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="/images/cover.jpg" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            @if($locale == 'ja')
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="/images/p3.jpg" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="/images/p10.jpg" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="/images/p26.jpg" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
             </div>
-          </div> 
-          <div id="slide2" class="carousel-item relative w-full">
-            <img src="/images/p3.jpg" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide1" class="btn btn-circle">❮</a> 
-              <a href="#slide3" class="btn btn-circle">❯</a>
-            </div>
-          </div> 
-          <div id="slide3" class="carousel-item relative w-full">
-            <img src="/images/p10.jpg" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide2" class="btn btn-circle">❮</a> 
-              <a href="#slide4" class="btn btn-circle">❯</a>
-            </div>
-          </div> 
-          <div id="slide4" class="carousel-item relative w-full">
-            <img src="/images/p26.jpg" class="w-full" />
-            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide3" class="btn btn-circle">❮</a> 
-              <a href="#slide1" class="btn btn-circle">❯</a>
-            </div>
+            @endif
           </div>
-        </div>
+        @else
+          <div class="inline-flex w-full">
+            <img src="/images/cover-en.png" class="w-full sm:w-[85%]" />
+          </div>
+        @endif
       </div>
       <div class="card-body {{ $locale == 'ja' ? 'font-ja' : 'font-en'}} font-bold">
         <h2 class="mb-5 card-title text-2xl">{{ __('I am an APPLE')}}</h2>
