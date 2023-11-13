@@ -1,5 +1,5 @@
 @php
-  $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+  $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
   App::setLocale($locale);
   $showmessage = 0;
   $notification_url = App\Models\Notification::checkForNotifications();
