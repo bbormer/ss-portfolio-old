@@ -1,6 +1,6 @@
 @php
-  $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
-  App::setLocale($locale);
+  // $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
+  // App::setLocale($locale);
   $statusValid = session()->get('validateStatus');
   // echo $_SERVER['HTTP_REFERER'];
 @endphp

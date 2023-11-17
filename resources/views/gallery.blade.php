@@ -1,6 +1,6 @@
 @php
-  $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
-  App::setLocale($locale);
+  // $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
+  $locale = App::getLocale();
   session()->forget(['validateStatus','name','email','address1','address2','city','state','zip','phone']);
   session(['validateStatus' => 0]);
 @endphp

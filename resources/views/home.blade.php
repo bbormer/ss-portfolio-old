@@ -1,6 +1,8 @@
 @php
-  $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
-  App::setLocale($locale);
+  // $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
+  // App::setLocale($locale);
+  $locale = App::getLocale();
+
   $showmessage = 0;
   $notification_url = App\Models\Notification::checkForNotifications();
   if(strlen($notification_url) > 0) {
@@ -16,7 +18,7 @@
 
   <div x-data>
     <h2 class="text-center text-2xl mb-[30px] md:mb-[50px] {{ $locale == 'ja' ? 'font-ja' : 'font-en' }}">{{ __('sceneries never seen before')}}</h2>
-    {{-- <h2 x-show="$store.locale == 'ja'" class="text-center text-2xl mb-[30px] md:mb-[50px] font-['Zen_Maru_Gothic']">まだ見たことのない景色</h2>
+    {{-- <h2 x-show="$store.locale == 'ja'" class="text-center text-2xl mb-[30px] md:mb-[50px] font-['Zen_Maru_Gothic']">まだ見たことのない景色</h2> 
 
     <h2 x-show="$store.locale != 'ja'" class="text-center text-2xl mb-12 md:mb-20 font-['Montserrat'] font-[200] transition-opacity duration-[1000ms]">{{ __('unencountered sceneries') }}</h2> --}}
   </div>

@@ -1,8 +1,8 @@
-@php
+{{-- @php
   $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
   // $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
   App::setLocale($locale);
-@endphp
+@endphp --}}
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -49,7 +49,7 @@
           $showmessage = 1;
         }
 
-        $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+        // $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
         // Config::set('global.locales', substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2));
         // echo "--".Config::get('global.locales')."--";
       @endphp

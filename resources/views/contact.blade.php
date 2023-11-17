@@ -1,8 +1,8 @@
-@php
+{{-- @php
   use Illuminate\Support\MessageBag;
   $locale = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2) : 'en';
   App::setLocale($locale);
-@endphp
+@endphp --}}
 
 <x-layout>
   <x-slot name="title">contact</x-slot>
